@@ -1,0 +1,9 @@
+version: '2'
+services:
+  app:
+    image: creaticoding/spring-project
+    command: bash -c "cd ~/project && gradle bootRun"
+    volumes:
+      - ./project:/root/project
+    ports:
+      - "8080:8080"
